@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+  <form id="form" name="form">
+    <label>
+      <span>名前<span class="required">*</span></span> 
+      <input type="text" name="name">
+    </label>
+    <label>
+      <span>メールアドレス<span class="required">*</span></span>
+      <input type="text" name="mail">
+    </label>
+    <label>
+      <span>性別<span class="required">*</span></span>
+      <div class="gender-wrapper">
+        <input type="radio" name="gender" value="男性"> 男性
+        <input type="radio" name="gender" value="女性"> 女性
+        <input type="radio" name="gender" value="その他"> その他
+      </div>
+    </label>
+    <label>
+      <span>年齢<span class="required">*</span></span>
+      <select name="age">
+        <option value="">選択してください</option>
+        <option value=10>10歳</option>
+        <option value=20>20歳</option>
+        <option value=30>30歳</option>
+        <option value=40>40歳</option>
+        <option value=50>50歳</option>
+      </select>
+    </label>
+    <label class="terms">
+      <input type="checkbox" id="term" name="term"/>
+      利用規約に同意する
+    </label>
+    <p id="error">未入力の項目があります</p>
+    <div class="button-wrapper">
+      <button name="button" id="button">登録</button>
+    </div>
+  </form>
+
+  <script src="./src/js/index.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="./src/js/jq.js"></script> -->
+</body>
+</html>

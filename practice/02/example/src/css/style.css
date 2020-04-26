@@ -1,0 +1,10 @@
+li {
+  display: table;
+}
+li span {
+  display: table-cell;
+  padding-right: 10px;
+}
+li p {
+  display: table-cell;
+}

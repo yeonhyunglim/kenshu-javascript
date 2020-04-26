@@ -1,0 +1,14 @@
+#form .gender-wrapper{
+  margin-top: 10px;
+}
+#form #button {
+  margin-top: 10px;
+}
+
+#text-wrapper {
+  display: none;
+}
+
+#text-wrapper.is-active {
+  display: block;
+}

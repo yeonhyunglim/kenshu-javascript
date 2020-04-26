@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+  <form id="form" name="form">
+    <input type="text" id="name" name="name" placeholder="名前">
+    <div class="gender-wrapper">
+      <label>
+        <input type="radio" value="男性" name="gender"/>
+        男性
+      </label>
+      <label>
+        <input type="radio" value="女性" name="gender"/>
+        女性
+      </label>
+      <label>
+        <input type="radio" value="その他" name="gender"/>
+        その他
+      </label>
+    </div>
+    <button type="button" id="button" name="register">登録</button>
+  </form>
+  <p id="text-wrapper">「<span id="name-text"></span>（<span id="gender-text"></span>）」送信できました</p>
+
+  <!-- <script src="./src/js/index.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="./src/js/jq.js"></script>
+</body>
+</html>
