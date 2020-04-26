@@ -17,7 +17,7 @@
     // Objectを配列に変換してiterateし、
     // filterを使って項目のチェックをして、falseの場合は配列に返す
     // 配列の長さが0である場合にtrueをそうでない場合はfalseを返す
-    return formElementsArray.filter(([_, el] = [...arr]) => {
+    return formElementsArray.filter(([_, el]) => {
       // checkboxは別のチェック
       if(el.type === 'checkbox') {
         return el.checked === false;
