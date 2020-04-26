@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const inputElement = document.getElementById('input');
   const textElement = document.getElementById('text');
   const searchText = 'yes';

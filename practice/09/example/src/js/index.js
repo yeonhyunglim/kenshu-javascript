@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const mainImg = document.getElementsByClassName('main-img')[0];
 
   const thumbImgs = document.getElementsByClassName('thumb-item-img');

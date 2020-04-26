@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const button = document.getElementById('button');
   const overlay = document.getElementById('modal-overlay');
   const content = document.getElementById('modal-content');

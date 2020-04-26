@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const elements = {
     prev: document.getElementsByClassName('prev')[0],
     next: document.getElementsByClassName('next')[0],

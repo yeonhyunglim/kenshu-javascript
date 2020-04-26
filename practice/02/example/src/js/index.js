@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const button = document.getElementById('button');
   const typeText = document.getElementsByClassName('text--type')[0];
   const classText = document.getElementsByClassName('text--class')[0];

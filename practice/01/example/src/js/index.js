@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   const company = {
     company_id: 1234,
     company_name: '会社名'

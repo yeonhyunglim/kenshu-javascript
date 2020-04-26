@@ -1,9 +1,13 @@
 (function() {
+  'use strict';
+
   const URL = 'https://jsonplaceholder.typicode.com/posts';
 
   const parentListElement = document.getElementById('list');
 
   function createItem (jsonItem) {
+    "use strict";
+
     const item = document.createElement('li');
 
     const titleElement = document.createElement('h3');
