@@ -4,7 +4,7 @@
 
 - JavaScriptコードレシピ - 158  
   
-### jQuery
+## jQuery
 - [.addClass()](http://js.studio-kingdom.com/jquery/attributes/add_class)  
 - [.removeClass()](http://js.studio-kingdom.com/jquery/attributes/  remove_class)  
 - [.toggleClass()](http://js.studio-kingdom.com/jquery/attributes/toggle_class)  

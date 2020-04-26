@@ -4,10 +4,10 @@
 
 まず各項目の `./README.md` の「内容」と「ねらい」、 `/example/index.html` をブラウザで見て、演習内容を確認してください。  
 その後、`/example/index.html` で記載された演習内容を満たすよう、 `/try/src/js/index.js` に実装を加えてください。  
-
+  
 参考図書とGoogleは程よく頼ってください。  
-困ったら各項目の「参考」を元に実装を進めてください。 
-にっちもさっちも行かない時には `/example/src/js/index.js` もしくは　`/example/src/js/jq.js` を参考にしてください。
+困ったら各項目の「参考」を元に実装を進めてください。  
+にっちもさっちも行かない時には `/example/src/js/index.js` もしくは　`/example/src/js/jq.js` を参考にしてください。  
 
 ## 前置き2
 
@@ -15,7 +15,7 @@ exampleはES2015以上の書き方、かつGoogle Chromeの最新版ブラウザ
   
 用いて良いJavaScriptライブラリはjQueryのみです。  
 演習用の `/try/index.html` には jQueryの3.5.0が読み込まれていますので、もしjQueryで記述する際にはそのまま `/example/src/js/index.js` に記述することができます。  
-必要に応じて `/try/src/css/style.css` と `/try/index.html` の記述を変更しても構いません。
+必要に応じて `/try/src/css/style.css` と `/try/index.html` の記述を変更しても構いません。  
 
 ## 参考図書
 

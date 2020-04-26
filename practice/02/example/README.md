@@ -1,4 +1,4 @@
-##　参考
+#　参考
 
 - [document.getElementById](https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById)
 - [document.getElementsByClassName](https://developer.mozilla.org/ja/docs/Web/API/Document/getElementsByClassName)
@@ -12,7 +12,7 @@
 - JavaScriptコードレシピ集 - 113, 135, 136, 137, 138, 139, 155, 157  
 - 初めてのJavaScript - P309 〜 P316  
 
-### jQuery
+## jQuery
 - [要素のセレクタ指定](http://js.studio-kingdom.com/jquery/selector/)  
 - [.on('イベント名', fn(){})](http://js.studio-kingdom.com/jquery/events/on)  
 - [.attr()](http://js.studio-kingdom.com/jquery/attributes/attr)  
