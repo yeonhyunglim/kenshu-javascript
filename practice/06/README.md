@@ -1,4 +1,4 @@
-# formの栄誉
+# formの制御
 
 ## 内容 
 `id="form" name="name"` の中にある `id="button" name="button"` がクリックされた際に  
