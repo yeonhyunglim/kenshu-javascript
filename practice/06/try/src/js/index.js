@@ -1,13 +1,17 @@
 (function () {
-    const name = $('#name');
-    const button = $('#button');
-    const nameText = $('#name-text');
-    const genderText= $('#gender-text');
-    const textWrapper = $('#text-wrapper');
+    const formElements = {
+        nameInput: $('input[name=name]'),
+        submitButton: $('#button')
+    }
+    const textElements = {
+        nameText: $('#name-text'),
+        genderText: $('#gender-text'),
+        textWrapper: $('#text-wrapper')
+    }
 
-    button.on('click', function () {
-        nameText.text(name.val());
-        genderText.text($('input:radio[name=gender]:checked').val());
-        textWrapper.addClass('is-active');
+    formElements.submitButton.on('click', function () {
+        textElements.nameText.text(formElements.nameInput.val());
+        textElements.genderText.text($('input:radio[name=gender]:checked').val());
+        textElements.textWrapper.addClass('is-active');
     });
 })();
