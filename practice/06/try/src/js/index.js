@@ -1,4 +1,6 @@
 (function () {
+    'use strict';
+    
     const formElements = {
         nameInput: $('input[name=name]'),
         submitButton: $('#button')
