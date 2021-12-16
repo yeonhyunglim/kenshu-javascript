@@ -1,4 +1,6 @@
 (function() {
+    'use strict';
+
     var form = $('#form');
   
     var formElements = {
@@ -18,7 +20,7 @@
         return false;
       } else if (formElements.gender.is(':checked') == false) {
         return false;
-      } else if (formElements.age.is(':selected') == false) { //.filter(':selected').text() == ''
+      } else if (formElements.age.val() == '') { //.filter(':selected').text() == '' 
         return false;
       } else if (formElements.term.is(':checked') == false) {
         return false;
@@ -40,5 +42,4 @@
         addActiveToError();
       }
     });
-  
   })();
