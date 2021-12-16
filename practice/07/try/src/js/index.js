@@ -1,40 +1,44 @@
-(function () {
-    const form = $('#form');
-
-    const formElements = {
-        name: $('input[name=name]'),
-        mail: $('input[name=mail]'),
-        gender: $('input[name=gender]'),
-        age: $('select[name=age]'),
-        term: $('input[name=term]'),
-    }
-
-    const errorNotice = $('#error');
-
-    function AreformElemenentsFilled () {
-        if(!formElements.name.value) {
-            return false;
-        } else if (!formElements.mail.value) {
-            return false;
-        } else if (!formElements.gender.prop('checked')) {
-            return false;
-        } else if (!formElements.age.value) {
-            return false;
-        } else if (!formElements.term.prop('checked')) {
-            return false;
-        } else {
-            return true;
-        };
+(function() {
+    var form = $('#form');
+  
+    var formElements = {
+      name: form.find('input[name=name]'),
+      mail: form.find('input[name=mail]'),
+      gender: form.find('input:radio[name=gender]'),
+      age: form.find('select[name=age]'),
+      term: form.find('input:checkbox[name=term]')
     };
-
-    function ActivatingErrorNotice () {
-        errorNotice.addClass('is-active');
+  
+    var errorText = $('#error');
+  
+    function isFormElementsFilled () {
+      if(formElements.name.val() == ''){
+        return false;
+      } else if (formElements.mail.val() == '') {
+        return false;
+      } else if (formElements.gender.is(':checked') == false) {
+        return false;
+      } else if (formElements.age.is(':selected') == false) { //.filter(':selected').text() == ''
+        return false;
+      } else if (formElements.term.is(':checked') == false) {
+        return false;
+      } else {
+        return true;
+      };
     };
-    
-// 폼 제출하거나 add class
-
-})();
-
-
-// 모두 다 입력했을 때, form의 submit
-// 하나라도 충족안되면 add class
+  
+    function addActiveToError () {
+      errorText.addClass('is-active');
+    };
+  
+    form.on('submit', function (event) {
+      event.preventDefault();
+  
+      if(isFormElementsFilled()) {
+        form[0].submit();
+      } else {
+        addActiveToError();
+      }
+    });
+  
+  })();
