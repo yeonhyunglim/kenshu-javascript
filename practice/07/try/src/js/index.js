@@ -1,45 +1,42 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    var form = $('#form');
-  
-    var formElements = {
-      name: form.find('input[name=name]'),
-      mail: form.find('input[name=mail]'),
-      gender: form.find('input:radio[name=gender]'),
-      age: form.find('select[name=age]'),
-      term: form.find('input:checkbox[name=term]')
-    };
-  
-    var errorText = $('#error');
-  
-    function isFormElementsFilled () {
-      if(formElements.name.val() == ''){
-        return false;
-      } else if (formElements.mail.val() == '') {
-        return false;
-      } else if (formElements.gender.is(':checked') == false) {
-        return false;
-      } else if (formElements.age.val() == '') { //.filter(':selected').text() == '' 
-        return false;
-      } else if (formElements.term.is(':checked') == false) {
-        return false;
+  const form = document.getElementById('form');
+
+  const formElements = {
+    name: form.name,
+    mail: form.mail,
+    gender: form.gender,
+    age: form.age,
+    term: form.term,
+  };
+
+  const formElementsArray = Object.values(formElements);
+
+  const errorText = document.getElementById('error');
+
+  function isFormElementsFilled () {
+    return formElementsArray.filter((el) => {
+      if(el.type === 'checkbox') {
+        return el.checked === false;
       } else {
-        return true;
-      };
-    };
-  
-    function addActiveToError () {
-      errorText.addClass('is-active');
-    };
-  
-    form.on('submit', function (event) {
-      event.preventDefault();
-  
-      if(isFormElementsFilled()) {
-        form[0].submit();
-      } else {
-        addActiveToError();
+        return el.value === '';
       }
-    });
-  })();
+    }).length === 0; // 길이가 0이면 빈 배열. 즉, 길이가 0라는 것은 체크가 안되어 있거나 값이 ''인 el이 없다는 뜻. 아무것도 array에 filter되어 반환되지 않아 빈 배열임. 
+  };
+
+  function addActiveToError () {
+    errorText.classList.add('is-active');
+  };
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    if(isFormElementsFilled()) {
+      event.currentTarget.submit();
+    } else {
+      addActiveToError();
+    }
+  });
+
+})();
