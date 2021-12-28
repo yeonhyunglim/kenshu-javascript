@@ -30,6 +30,6 @@
     })
 })();
 
-// for 반복문 말고 for each를 사용할 수 있을 듯. 전에 했던 것 참고해봅시다
-// fetch API는 아직 안함.
-// array 안에 object야. [{}, {}, ...]
+
+// jsonplaceholder는 array 안에 object가 있는 형태 [{}, {}, ...]
+// for 반복문 말고 for each를 사용할 수 있음. practice 04 참고하기
