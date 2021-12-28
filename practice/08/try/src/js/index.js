@@ -3,17 +3,7 @@
 
     const listElement = document.getElementById('list');
 
-    var request = new XMLHttpRequest();
     const URL = 'https://jsonplaceholder.typicode.com/posts';
-
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
-
-    request.onload = function() {
-        var titleBody = request.response;
-        showTitleBody(titleBody);
-    }
 
     function createElements (jsonObj) {
         for (var i = 0; i < jsonObj.length; i++) {
@@ -30,6 +20,14 @@
         }
     }
 
+    fetch(URL)
+    .then(data => {
+        return data.json();
+    }).then(json => {
+        createElements(json);
+    }).catch(err => {
+        throw new Error(err);
+    })
 })();
 
 // for 반복문 말고 for each를 사용할 수 있을 듯. 전에 했던 것 참고해봅시다
