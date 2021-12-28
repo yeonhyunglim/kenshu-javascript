@@ -1,10 +1,10 @@
 (function () {
     'use strict';
 
-    const ulList = document.getElementById('list');
+    const listElement = document.getElementById('list');
 
-    var requestURL = 'https://jsonplaceholder.typicode.com/posts';
     var request = new XMLHttpRequest();
+    const URL = 'https://jsonplaceholder.typicode.com/posts';
 
     request.open('GET', requestURL);
     request.responseType = 'json';
@@ -15,18 +15,18 @@
         showTitleBody(titleBody);
     }
 
-    function showTitleBody(jsonObj) {
+    function createElements (jsonObj) {
         for (var i = 0; i < jsonObj.length; i++) {
-            var myLi = document.createElement('li');
-            ulList.appendChild(myLi);
+            var item = document.createElement('li');
+            listElement.appendChild(item);
 
-            var myH3 = document.createElement('h3');
-            myH3.textContent = jsonObj[i]['title'];
-            myLi.appendChild(myH3);
+            var titleElement = document.createElement('h3');
+            titleElement.textContent = jsonObj[i]['title'];
+            item.appendChild(titleElement);
 
-            var mypara = document.createElement('p');
-            mypara.textContent = jsonObj[i]['body'];
-            myLi.appendChild(mypara); 
+            var bodyElement = document.createElement('p');
+            bodyElement.textContent = jsonObj[i]['body'];
+            item.appendChild(bodyElement); 
         }
     }
 
