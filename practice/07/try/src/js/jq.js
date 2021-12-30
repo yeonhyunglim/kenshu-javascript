@@ -34,7 +34,7 @@
     };
   
     form.on('submit', function (event) {
-      event.preventDefault();　// 페이지를 다시 불러오는 것을 방지하기 위해 추가
+      event.preventDefault(); // 페이지를 다시 불러오는 것을 방지하기 위해 추가
   
       if(isFormElementsFilled()) {
         form[0].submit(); // form[0]은 첫번째 form을 의미함.
