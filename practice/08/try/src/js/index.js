@@ -1,21 +1,21 @@
 (function () {
     'use strict';
 
-    const listElement = document.getElementById('list');
+    let listElement = document.getElementById('list');
 
-    const URL = 'https://jsonplaceholder.typicode.com/posts';
+    let URL = 'https://jsonplaceholder.typicode.com/posts';
 
     function createElements (jsonObj) {
         for (var i = 0; i < jsonObj.length; i++) {
-            var item = document.createElement('li');
+            let item = document.createElement('li');
             listElement.appendChild(item);
 
-            var titleElement = document.createElement('h3');
-            titleElement.textContent = jsonObj[i]['title'];
+            let titleElement = document.createElement('h3');
+            titleElement.textContent = jsonObj[i]['title']; // 角括弧を使用した書き方
             item.appendChild(titleElement);
 
-            var bodyElement = document.createElement('p');
-            bodyElement.textContent = jsonObj[i]['body'];
+            let bodyElement = document.createElement('p');
+            bodyElement.textContent = jsonObj[i]['body']; // 角括弧を使用した書き方
             item.appendChild(bodyElement); 
         }
     }
