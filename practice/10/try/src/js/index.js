@@ -9,9 +9,9 @@
 
   function prevImage() {
     if (imageIndex > 0) {
-      imageList.classList.add('is-transition');
       position += imageWidth;
-      imageList.style.transform = `translateX(${position}px)`;
+      imageList.style.marginLeft = `${position}px`;
+      imageList.classList.add('is-transition');
       imageIndex = imageIndex - 1;
     }
     if (imageIndex == 0) {
@@ -20,9 +20,9 @@
   }
   function nextImage() {
     if (imageIndex < 2) {
-      imageList.classList.add('is-transition');
       position -= imageWidth;
-      imageList.style.transform = `translateX(${position}px)`;
+      imageList.style.marginLeft = `${position}px`;
+      imageList.classList.add('is-transition');
       imageIndex = imageIndex + 1;
     }
     if (imageIndex == 2) {
@@ -36,6 +36,4 @@
   init();
 })();
 
-//.list.is-transition {transition: margin-left .3s;} 3초가 적용 안됨.
-// translateX 공부하기
 // 1에서 3, 3에서 1 아직 구현 안함
