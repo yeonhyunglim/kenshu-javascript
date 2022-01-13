@@ -23,9 +23,8 @@
       imageList.style.marginLeft = `${position}px`;
       imageList.classList.add('is-transition');
       imageIndex = imageIndex + 1;
-    }
-    if (imageIndex == 2) {
-      // move to 1st image
+    } else {
+      imageList.appendChild(imageList.firstElementChild);
     }
   }
   function init() {
