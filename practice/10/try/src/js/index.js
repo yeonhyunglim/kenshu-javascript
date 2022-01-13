@@ -13,10 +13,9 @@
       imageList.style.marginLeft = `${position}px`;
       imageList.classList.add('is-transition');
       imageIndex = imageIndex - 1;
+    } else {
+      imageList.insertBefore(imageList.lastElementChild, imageList.firstElementChild);
     }
-    if (imageIndex == 0) {
-    }
-    // move to 3rd image
   }
   function nextImage() {
     if (imageIndex < 2) {
