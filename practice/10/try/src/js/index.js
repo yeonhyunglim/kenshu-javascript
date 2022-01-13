@@ -35,3 +35,11 @@
 })();
 
 // 1에서 3, 3에서 1 아직 구현 안함
+/*  function endTransition(prevOrNext) {
+    imageList.removeAttribute('style');
+    prevOrNext == 'prev' ? imageList.insertBefore(imageList.lastElementChild, imageList.firstElementChild) : imageList.appendChild(imageList.firstElementChild);
+  } */
+/*     imageList.ontransitioned = () => {
+      endTransition; */
+/*   function endTransition(prevOrNext) {
+    imageList.removeAttribute('style'); */
