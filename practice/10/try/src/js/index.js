@@ -21,7 +21,7 @@
     }
   }
   function nextImage() {
-    if (imageIndex < 2) {
+    if (imageIndex < imageLength - 1) {
       position -= imageWidth;
       imageList.style.marginLeft = `${position}px`;
       imageList.classList.add('is-transition');
