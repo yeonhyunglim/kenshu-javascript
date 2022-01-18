@@ -1,11 +1,14 @@
 (function () {
+  'use strict';
+  const imageList = document.getElementsByClassName('list')[0];
+  const imageItem = document.getElementsByClassName('item');
+  const prev = document.getElementsByClassName('prev')[0];
+  const next = document.getElementsByClassName('next')[0];
+
   let imageIndex = 0;
   let position = 0;
   const imageWidth = 400;
-
-  const imageList = document.getElementsByClassName('list')[0];
-  const prev = document.getElementsByClassName('prev')[0];
-  const next = document.getElementsByClassName('next')[0];
+  const imageLength = imageItem.length;
 
   function prevImage() {
     if (imageIndex > 0) {
