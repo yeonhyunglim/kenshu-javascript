@@ -38,27 +38,31 @@
     imageList.classList.add('is-transition');
   }
 
-  // transition end
-  imageList.addEventListener('transitionend', () => {
-    if (imageItems[currentIndex].id === 'first-clone') {
+  function transitionEnd() {
+    if (currentIndex == itemLength - 1) {
       currentIndex = 1;
       imageList.classList.remove('is-transition');
       imageList.style.marginLeft = `-${currentIndex * itemWidth}px`;
     }
-    if (imageItems[currentIndex].id === 'last-clone') {
+    if (currentIndex == 0) {
       currentIndex = itemLength - 2;
       imageList.classList.remove('is-transition');
       imageList.style.marginLeft = `-${currentIndex * itemWidth}px`;
     }
-  });
+  }
 
+  // calling funtions
   makeClone();
-
   setFirstNode();
 
+  // updating variables because the number of elements is changed because of cloning
   imageItems = document.querySelectorAll('.item');
   itemLength = imageItems.length;
 
+  // carousel event
   next.addEventListener('click', moveToNextItem);
   prev.addEventListener('click', moveToPrevItem);
+
+  //transition end event
+  imageList.addEventListener('transitionend', transitionEnd);
 })();
