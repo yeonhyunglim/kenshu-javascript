@@ -11,19 +11,17 @@
   const itemWidth = imageItems[currentIndex].clientWidth;
   let itemLength = imageItems.length;
 
+  // defining fuctions
   function makeClone() {
-    const firstClone = imageItems[0].cloneNode(true); // deep clone 1st item after last item
-    const lastClone = imageItems[itemLength - 1].cloneNode(true); // deep clone last item before 1st item
-
-    firstClone.id = 'first-clone';
-    lastClone.id = 'last-clone';
+    const firstClone = imageItems[0].cloneNode(true); // deep clone the 1st item
+    const lastClone = imageItems[itemLength - 1].cloneNode(true); // deep clone the last itme (here, it is the 3rd one)
 
     imageList.append(firstClone);
     imageList.prepend(lastClone);
   }
 
   function setFirstNode() {
-    imageList.style.marginLeft = `-${itemWidth}px`;
+    imageList.style.marginLeft = `-${itemWidth}px`; // 클론된 요소들이 반영되기 전. 그래서 초기의 첫번째 요소인 숫자 1.
   }
 
   function moveToNextItem() {
