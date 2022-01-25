@@ -32,14 +32,14 @@
   width: auto;
 }
 .list.is-transition {
-  transition: margin-left .3s;
+  transition: margin-left 0.3s;
 }
 .item {
-  width:400px;
+  width: 400px;
   height: inherit;
 }
 .img {
-  width:inherit;
+  width: inherit;
   height: inherit;
 }
 .prev,
