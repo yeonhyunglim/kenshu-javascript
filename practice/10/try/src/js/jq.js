@@ -6,7 +6,7 @@ $(function () {
   const prev = $('.prev');
 
   // values
-  const currentIndex = 1;
+  let currentIndex = 1;
   const itemWidth = imageItems.outerWidth();
   let itemLength = imageItems.length;
 
